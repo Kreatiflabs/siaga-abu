@@ -10,7 +10,8 @@ import { VolcanoSidebar } from '@/components/VolcanoSidebar';
 import { AdvisoryDetailModal } from '@/components/AdvisoryDetailModal';
 import { ScenarioSimulator } from '@/components/ScenarioSimulator';
 import { generateSimulationAdvisory } from '@/lib/utils';
-import { AlertTriangle, Info, Flame, ShieldAlert, Sparkles, MapPin, Users, Eye, ExternalLink } from 'lucide-react';
+import { VisitorCounter } from '@/components/VisitorCounter';
+import { AlertTriangle, Info, Flame, ShieldAlert, Sparkles, MapPin, ExternalLink } from 'lucide-react';
 
 export default function HomePage() {
   const [volcanoes, setVolcanoes] = useState<Volcano[]>(VOLCANOES_INDONESIA);
@@ -306,22 +307,10 @@ export default function HomePage() {
         </div>
       </footer>
 
-      {/* Floating Info: Pojok Kiri Bawah (Pengunjung) & Pojok Kanan Bawah (Kreatif Labs) */}
+      {/* Floating Info: Pojok Kiri Bawah (Pengunjung Real-Time) & Pojok Kanan Bawah (Kreatif Labs) */}
       <div className="fixed bottom-3 inset-x-3 z-30 flex flex-col sm:flex-row items-center justify-between gap-2.5 pointer-events-none">
-        {/* Pojok Kiri Bawah: Statistik Pengunjung */}
-        <div className="pointer-events-auto flex items-center gap-2.5 bg-slate-900/95 hover:bg-slate-900 backdrop-blur-md border border-slate-700/80 text-slate-300 text-xs px-3.5 py-1.5 rounded-full shadow-2xl transition">
-          <div className="flex items-center gap-1.5">
-            <Users className="w-3.5 h-3.5 text-cyan-400" />
-            <span className="font-bold text-white tracking-wide">41.305</span>
-            <span className="text-slate-400 text-[11px]">dikunjungi</span>
-          </div>
-          <span className="text-slate-600 font-light">|</span>
-          <div className="flex items-center gap-1.5">
-            <Eye className="w-3.5 h-3.5 text-amber-400" />
-            <span className="font-bold text-white tracking-wide">75.999</span>
-            <span className="text-slate-400 text-[11px]">dilihat</span>
-          </div>
-        </div>
+        {/* Pojok Kiri Bawah: Real-Time Live Visitor Counter */}
+        <VisitorCounter />
 
         {/* Pojok Kanan Bawah: Edukasi / Mitigasi Bencana - Dibuat oleh www.kreatiflabs.com */}
         <div className="pointer-events-auto flex items-center">
