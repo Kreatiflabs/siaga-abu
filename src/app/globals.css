@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #020617;
+  --foreground: #f8fafc;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Custom Leaflet Map Styles */
+.leaflet-container {
+  width: 100%;
+  height: 100%;
+  background: #020617 !important;
+}
+
+/* Custom Tooltips */
+.leaflet-custom-tooltip {
+  background: rgba(15, 23, 42, 0.95) !important;
+  border: 1px solid rgba(51, 65, 85, 0.8) !important;
+  color: #f8fafc !important;
+  font-size: 11px !important;
+  border-radius: 8px !important;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5) !important;
+  padding: 6px 10px !important;
+}
+
+.leaflet-custom-tooltip::before {
+  border-top-color: rgba(15, 23, 42, 0.95) !important;
+}
+
+/* Custom Popup Overrides */
+.leaflet-popup-content-wrapper {
+  background: #ffffff !important;
+  border-radius: 14px !important;
+  padding: 2px !important;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.6) !important;
+}
+
+.leaflet-popup-tip {
+  background: #ffffff !important;
+}
+
+/* Animasi Poligon Abu Vulkanik */
+.leaflet-ash-observed {
+  filter: drop-shadow(0 0 8px rgba(239, 68, 68, 0.6));
+  animation: ashPulse 3s ease-in-out infinite;
+}
+
+@keyframes ashPulse {
+  0%, 100% {
+    stroke-opacity: 1;
+    fill-opacity: 0.35;
+  }
+  50% {
+    stroke-opacity: 0.6;
+    fill-opacity: 0.5;
+  }
+}
+
+.leaflet-ash-forecast {
+  filter: drop-shadow(0 0 5px rgba(245, 158, 11, 0.4));
+  stroke-dasharray: 6, 6;
+}
+
+/* Scrollbar kustom */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #090d16;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
