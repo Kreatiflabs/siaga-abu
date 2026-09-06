@@ -28,9 +28,10 @@ export const HeaderNavbar: React.FC<HeaderNavbarProps> = ({
   useEffect(() => {
     const updateClocks = () => {
       const now = new Date();
-      setCurrentUtcTime(
-        now.toUTCString().replace('GMT', 'UTC').split(' ').slice(4, 6).join(' ') + ' UTC'
-      );
+      const h = now.getUTCHours().toString().padStart(2, '0');
+      const m = now.getUTCMinutes().toString().padStart(2, '0');
+      const s = now.getUTCSeconds().toString().padStart(2, '0');
+      setCurrentUtcTime(`${h}:${m}:${s} UTC`);
       setCurrentWibTime(
         new Intl.DateTimeFormat('id-ID', {
           timeZone: 'Asia/Jakarta',
@@ -52,9 +53,38 @@ export const HeaderNavbar: React.FC<HeaderNavbarProps> = ({
         <div className="flex flex-col md:flex-row items-center justify-between gap-3">
           {/* Logo & Judul */}
           <div className="flex items-center gap-3 w-full md:w-auto justify-between md:justify-start">
-            <div className="flex items-center gap-2.5">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-red-600 to-amber-600 flex items-center justify-center shadow-lg shadow-red-900/30">
-                <Flame className="w-6 h-6 text-white animate-pulse" />
+            <div className="flex items-center gap-3">
+              {/* Logo SVG Modern Gunung Api & Awan Abu Vulkanik */}
+              <div className="w-11 h-11 rounded-2xl bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-950 p-1 border border-orange-500/50 shadow-xl shadow-orange-950/40 flex items-center justify-center flex-shrink-0 group hover:border-orange-400 transition">
+                <svg viewBox="0 0 64 64" className="w-full h-full" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  {/* Ash Cloud Plume */}
+                  <path d="M32 8C27 8 24 11 24 14C20 14 18 17 19 20C15 21 15 26 18 28C21 30 27 31 32 31C37 31 43 30 46 28C49 26 49 21 45 20C46 17 44 14 40 14C40 11 37 8 32 8Z" fill="url(#navAshGrad)" />
+                  <circle cx="32" cy="13" r="5" fill="#fef08a" opacity="0.6" className="animate-pulse" />
+                  
+                  {/* Ejecta Sparks */}
+                  <circle cx="16" cy="13" r="1.5" fill="#f59e0b" />
+                  <circle cx="48" cy="12" r="1.5" fill="#f97316" />
+                  <circle cx="34" cy="6" r="1.2" fill="#fbbf24" />
+
+                  {/* Mountain Slope */}
+                  <path d="M26 32L10 56C9.5 56.8 10 58 11 58H53C54 58 54.5 56.8 54 56L38 32H26Z" fill="#334155" />
+                  
+                  {/* Crater Caldera Glow */}
+                  <ellipse cx="32" cy="32" rx="6" ry="2" fill="#fbbf24" />
+
+                  {/* Magma Fissure Lines */}
+                  <path d="M32 32L31 39L33 45L30 53" stroke="#f97316" strokeWidth="2.5" strokeLinecap="round" />
+                  <path d="M28 34L25 41L23 49" stroke="#ef4444" strokeWidth="1.8" strokeLinecap="round" opacity="0.9" />
+                  <path d="M36 34L39 42L41 50" stroke="#ef4444" strokeWidth="1.8" strokeLinecap="round" opacity="0.9" />
+
+                  <defs>
+                    <linearGradient id="navAshGrad" x1="32" y1="8" x2="32" y2="31" gradientUnits="userSpaceOnUse">
+                      <stop offset="0%" stopColor="#ff7849" />
+                      <stop offset="60%" stopColor="#ea580c" />
+                      <stop offset="100%" stopColor="#b91c1c" />
+                    </linearGradient>
+                  </defs>
+                </svg>
               </div>
               <div>
                 <div className="flex items-center gap-2">

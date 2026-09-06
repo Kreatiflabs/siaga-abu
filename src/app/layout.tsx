@@ -18,6 +18,13 @@ export const metadata: Metadata = {
     'Merapi',
   ],
   authors: [{ name: 'Sistem Pemantauan Vulkanik Indonesia' }],
+  icons: {
+    icon: [
+      { url: '/icon.svg', type: 'image/svg+xml' },
+    ],
+    shortcut: '/icon.svg',
+    apple: '/icon.svg',
+  },
 };
 
 export default function RootLayout({
