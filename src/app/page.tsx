@@ -298,7 +298,7 @@ export default function HomePage() {
               rel="noopener noreferrer"
               className="text-amber-400 hover:text-amber-300 font-semibold underline decoration-amber-500/40 transition"
             >
-              Kreatif Labs
+              KreatifLabs
             </a>
           </p>
           <p className="text-[11px] text-slate-500 pt-1 font-mono">
@@ -307,12 +307,12 @@ export default function HomePage() {
         </div>
       </footer>
 
-      {/* Floating Info: Pojok Kiri Bawah (Pengunjung Real-Time) & Pojok Kanan Bawah (Kreatif Labs) */}
+      {/* Floating Info: Pojok Kiri Bawah (Pengunjung Real-Time) & Pojok Kanan Bawah (KreatifLabs) */}
       <div className="fixed bottom-3 inset-x-3 z-30 flex flex-col sm:flex-row items-center justify-between gap-2.5 pointer-events-none">
         {/* Pojok Kiri Bawah: Real-Time Live Visitor Counter */}
         <VisitorCounter />
 
-        {/* Pojok Kanan Bawah: Edukasi / Mitigasi Bencana - Siaga Abu oleh Kreatif Labs */}
+        {/* Pojok Kanan Bawah: Edukasi / Mitigasi Bencana - Siaga Abu oleh KreatifLabs */}
         <div className="pointer-events-auto flex items-center">
           <a
             href="https://www.kreatiflabs.com"

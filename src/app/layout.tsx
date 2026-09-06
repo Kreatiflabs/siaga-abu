@@ -4,11 +4,11 @@ import './globals.css';
 export const metadata: Metadata = {
   title: 'Siaga Abu — Pemantauan Abu Vulkanik Indonesia · Live VAAC Darwin',
   description:
-    'Siaga Abu (siaga-abu.kreatiflabs.com): Sistem pemantauan sebaran abu vulkanik interaktif di ruang udara Indonesia berbasis data live VAAC Darwin & buletin ICAO SIGMET oleh Kreatif Labs.',
+    'Siaga Abu (siaga-abu.kreatiflabs.com): Sistem pemantauan sebaran abu vulkanik interaktif di ruang udara Indonesia berbasis data live VAAC Darwin & buletin ICAO SIGMET oleh KreatifLabs.',
   keywords: [
     'Siaga Abu',
     'siaga-abu.kreatiflabs.com',
-    'Kreatif Labs',
+    'KreatifLabs',
     'VAAC Darwin',
     'Abu Vulkanik Indonesia',
     'Volcanic Ash Advisory',
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     'Semeru',
     'Krakatau',
   ],
-  authors: [{ name: 'Kreatif Labs', url: 'https://www.kreatiflabs.com' }],
+  authors: [{ name: 'KreatifLabs', url: 'https://www.kreatiflabs.com' }],
   icons: {
     icon: [
       { url: '/icon.svg', type: 'image/svg+xml' },

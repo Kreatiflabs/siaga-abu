@@ -86,6 +86,7 @@ export const HeaderNavbar: React.FC<HeaderNavbarProps> = ({
                   </defs>
                 </svg>
               </div>
+              <div>
                 <div className="flex items-center gap-2">
                   <h1 className="text-base sm:text-lg font-bold tracking-tight text-white flex items-center gap-2">
                     <span className="bg-gradient-to-r from-white via-slate-100 to-amber-200 bg-clip-text text-transparent font-extrabold">
