@@ -86,17 +86,19 @@ export const HeaderNavbar: React.FC<HeaderNavbarProps> = ({
                   </defs>
                 </svg>
               </div>
-              <div>
                 <div className="flex items-center gap-2">
-                  <h1 className="text-base sm:text-lg font-bold tracking-tight text-white flex items-center gap-1.5">
-                    Live VAAC Darwin
-                    <span className="text-xs px-2 py-0.5 rounded-full bg-red-950 text-red-300 border border-red-800/80 font-medium">
-                      Indonesia
+                  <h1 className="text-base sm:text-lg font-bold tracking-tight text-white flex items-center gap-2">
+                    <span className="bg-gradient-to-r from-white via-slate-100 to-amber-200 bg-clip-text text-transparent font-extrabold">
+                      Siaga Abu
+                    </span>
+                    <span className="text-[11px] px-2.5 py-0.5 rounded-full bg-gradient-to-r from-red-950 to-amber-950 text-amber-300 border border-amber-700/80 font-semibold flex items-center gap-1.5 shadow-sm">
+                      <span className="w-1.5 h-1.5 rounded-full bg-red-500 animate-pulse"></span>
+                      Live VAAC Darwin
                     </span>
                   </h1>
                 </div>
                 <p className="text-xs text-slate-400">
-                  Pemantauan Sebaran Abu Vulkanik & Buletin ICAO SIGMET
+                  Pemantauan Sebaran Abu Vulkanik &amp; Buletin ICAO SIGMET Indonesia
                 </p>
               </div>
             </div>

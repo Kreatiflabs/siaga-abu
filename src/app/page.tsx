@@ -287,22 +287,22 @@ export default function HomePage() {
       {/* Footer */}
       <footer className="border-t border-slate-900 bg-slate-950 py-6 pb-20 text-center text-xs text-slate-500">
         <div className="max-w-7xl mx-auto px-4 space-y-1.5">
-          <p>
-            Sistem Pemantauan Abu Vulkanik Wilayah Indonesia &bull; Integrasi Live VAAC Darwin &amp; ICAO AWC SIGMET
+          <p className="font-semibold text-slate-200 text-sm">
+            Siaga Abu &bull; Sistem Pemantauan Abu Vulkanik Ruang Udara Indonesia
           </p>
           <p className="text-[11px] text-slate-400">
-            Edukasi &amp; Mitigasi Bencana Vulkanik &bull; Dibuat oleh{' '}
+            Integrasi Data Live VAAC Darwin &amp; ICAO AWC SIGMET &bull; Inisiatif Edukasi &amp; Mitigasi Bencana oleh{' '}
             <a
               href="https://www.kreatiflabs.com"
               target="_blank"
               rel="noopener noreferrer"
               className="text-amber-400 hover:text-amber-300 font-semibold underline decoration-amber-500/40 transition"
             >
-              www.kreatiflabs.com
+              Kreatif Labs
             </a>
           </p>
-          <p className="text-[10px] text-slate-600 pt-1">
-            Siap di-deploy ke Vercel Serverless Platform
+          <p className="text-[11px] text-slate-500 pt-1 font-mono">
+            siaga-abu.kreatiflabs.com
           </p>
         </div>
       </footer>
@@ -312,7 +312,7 @@ export default function HomePage() {
         {/* Pojok Kiri Bawah: Real-Time Live Visitor Counter */}
         <VisitorCounter />
 
-        {/* Pojok Kanan Bawah: Edukasi / Mitigasi Bencana - Dibuat oleh www.kreatiflabs.com */}
+        {/* Pojok Kanan Bawah: Edukasi / Mitigasi Bencana - Siaga Abu oleh Kreatif Labs */}
         <div className="pointer-events-auto flex items-center">
           <a
             href="https://www.kreatiflabs.com"
@@ -325,10 +325,10 @@ export default function HomePage() {
               <span className="relative inline-flex rounded-full h-2 w-2 bg-amber-500"></span>
             </span>
             <span className="text-slate-400 text-[11px] group-hover:text-slate-300">
-              Edukasi &amp; Mitigasi Bencana &bull; Dibuat oleh
+              <strong className="text-slate-200">Siaga Abu</strong> &bull; Edukasi &amp; Mitigasi Bencana oleh
             </span>
             <span className="font-bold text-amber-400 group-hover:text-amber-300 underline decoration-amber-500/50 flex items-center gap-1">
-              www.kreatiflabs.com
+              kreatiflabs.com
               <ExternalLink className="w-3 h-3 opacity-70 group-hover:opacity-100 transition" />
             </span>
           </a>

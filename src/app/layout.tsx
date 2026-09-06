@@ -2,22 +2,23 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Pemantauan Abu Vulkanik Indonesia · Live VAAC Darwin & ICAO SIGMET',
+  title: 'Siaga Abu — Pemantauan Abu Vulkanik Indonesia · Live VAAC Darwin',
   description:
-    'Sistem pemantauan sebaran abu vulkanik interaktif di ruang udara Indonesia berbasis data live VAAC Darwin & buletin ICAO SIGMET, dilengkapi visualisasi poligon sebaran dan katalog gunung api aktif.',
+    'Siaga Abu (siaga-abu.kreatiflabs.com): Sistem pemantauan sebaran abu vulkanik interaktif di ruang udara Indonesia berbasis data live VAAC Darwin & buletin ICAO SIGMET oleh Kreatif Labs.',
   keywords: [
+    'Siaga Abu',
+    'siaga-abu.kreatiflabs.com',
+    'Kreatif Labs',
     'VAAC Darwin',
-    'Abu Vulkanik',
+    'Abu Vulkanik Indonesia',
     'Volcanic Ash Advisory',
     'SIGMET',
     'Gunung Api Indonesia',
-    'ICAO',
-    'Penerbangan',
+    'Penerbangan Indonesia',
     'Semeru',
     'Krakatau',
-    'Merapi',
   ],
-  authors: [{ name: 'Sistem Pemantauan Vulkanik Indonesia' }],
+  authors: [{ name: 'Kreatif Labs', url: 'https://www.kreatiflabs.com' }],
   icons: {
     icon: [
       { url: '/icon.svg', type: 'image/svg+xml' },
