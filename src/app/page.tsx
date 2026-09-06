@@ -10,7 +10,7 @@ import { VolcanoSidebar } from '@/components/VolcanoSidebar';
 import { AdvisoryDetailModal } from '@/components/AdvisoryDetailModal';
 import { ScenarioSimulator } from '@/components/ScenarioSimulator';
 import { generateSimulationAdvisory } from '@/lib/utils';
-import { AlertTriangle, Info, Flame, ShieldAlert, Sparkles, MapPin } from 'lucide-react';
+import { AlertTriangle, Info, Flame, ShieldAlert, Sparkles, MapPin, Users, Eye, ExternalLink } from 'lucide-react';
 
 export default function HomePage() {
   const [volcanoes, setVolcanoes] = useState<Volcano[]>(VOLCANOES_INDONESIA);
@@ -284,14 +284,67 @@ export default function HomePage() {
       </main>
 
       {/* Footer */}
-      <footer className="border-t border-slate-900 bg-slate-950 py-4 text-center text-xs text-slate-500">
-        <p>
-          Sistem Pemantauan Abu Vulkanik Wilayah Indonesia &bull; Integrasi Live VAAC Darwin & ICAO AWC SIGMET
-        </p>
-        <p className="text-[11px] text-slate-600 mt-1">
-          Siap di-deploy ke Vercel Serverless Platform
-        </p>
+      <footer className="border-t border-slate-900 bg-slate-950 py-6 pb-20 text-center text-xs text-slate-500">
+        <div className="max-w-7xl mx-auto px-4 space-y-1.5">
+          <p>
+            Sistem Pemantauan Abu Vulkanik Wilayah Indonesia &bull; Integrasi Live VAAC Darwin &amp; ICAO AWC SIGMET
+          </p>
+          <p className="text-[11px] text-slate-400">
+            Edukasi &amp; Mitigasi Bencana Vulkanik &bull; Dibuat oleh{' '}
+            <a
+              href="https://www.kreatiflabs.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-amber-400 hover:text-amber-300 font-semibold underline decoration-amber-500/40 transition"
+            >
+              www.kreatiflabs.com
+            </a>
+          </p>
+          <p className="text-[10px] text-slate-600 pt-1">
+            Siap di-deploy ke Vercel Serverless Platform
+          </p>
+        </div>
       </footer>
+
+      {/* Floating Info: Pojok Kiri Bawah (Pengunjung) & Pojok Kanan Bawah (Kreatif Labs) */}
+      <div className="fixed bottom-3 inset-x-3 z-30 flex flex-col sm:flex-row items-center justify-between gap-2.5 pointer-events-none">
+        {/* Pojok Kiri Bawah: Statistik Pengunjung */}
+        <div className="pointer-events-auto flex items-center gap-2.5 bg-slate-900/95 hover:bg-slate-900 backdrop-blur-md border border-slate-700/80 text-slate-300 text-xs px-3.5 py-1.5 rounded-full shadow-2xl transition">
+          <div className="flex items-center gap-1.5">
+            <Users className="w-3.5 h-3.5 text-cyan-400" />
+            <span className="font-bold text-white tracking-wide">41.305</span>
+            <span className="text-slate-400 text-[11px]">dikunjungi</span>
+          </div>
+          <span className="text-slate-600 font-light">|</span>
+          <div className="flex items-center gap-1.5">
+            <Eye className="w-3.5 h-3.5 text-amber-400" />
+            <span className="font-bold text-white tracking-wide">75.999</span>
+            <span className="text-slate-400 text-[11px]">dilihat</span>
+          </div>
+        </div>
+
+        {/* Pojok Kanan Bawah: Edukasi / Mitigasi Bencana - Dibuat oleh www.kreatiflabs.com */}
+        <div className="pointer-events-auto flex items-center">
+          <a
+            href="https://www.kreatiflabs.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group flex items-center gap-2 bg-slate-900/95 hover:bg-slate-800 backdrop-blur-md border border-slate-700/80 hover:border-amber-500/80 text-slate-300 hover:text-white text-xs px-3.5 py-1.5 rounded-full shadow-2xl transition duration-200"
+          >
+            <span className="flex h-2 w-2 relative">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-amber-500"></span>
+            </span>
+            <span className="text-slate-400 text-[11px] group-hover:text-slate-300">
+              Edukasi &amp; Mitigasi Bencana &bull; Dibuat oleh
+            </span>
+            <span className="font-bold text-amber-400 group-hover:text-amber-300 underline decoration-amber-500/50 flex items-center gap-1">
+              www.kreatiflabs.com
+              <ExternalLink className="w-3 h-3 opacity-70 group-hover:opacity-100 transition" />
+            </span>
+          </a>
+        </div>
+      </div>
 
       {/* Modal Rincian Buletin / Poligon */}
       <AdvisoryDetailModal
